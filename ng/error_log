@@ -1,0 +1,7 @@
+[02-Jun-2017 05:38:13 UTC] PHP Fatal error:  Call to a member function fetch_array() on null in /home/khmerjob/public_html/ng/register_check.php on line 12
+[02-Jun-2017 11:24:22 UTC] PHP Fatal error:  Call to a member function fetch_array() on null in /home/khmerjob/public_html/ng/register_check.php on line 12
+[02-Jun-2017 18:59:21 UTC] PHP Fatal error:  Call to a member function fetch_array() on null in /home/khmerjob/public_html/ng/register_check.php on line 12
+[03-Jun-2017 00:35:11 UTC] PHP Fatal error:  Call to a member function fetch_array() on null in /home/khmerjob/public_html/ng/register_check.php on line 12
+[03-Jun-2017 22:33:09 UTC] PHP Fatal error:  Call to a member function fetch_array() on null in /home/khmerjob/public_html/ng/register_check.php on line 12
+[06-Jun-2017 19:56:56 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/khmerjob/public_html/ng/upload.php on line 8
+[28-Jun-2017 04:25:10 UTC] PHP Warning:  getimagesize(): Filename cannot be empty in /home/khmerjob/public_html/ng/upload.php on line 8
