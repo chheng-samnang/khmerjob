@@ -63,7 +63,7 @@
 					</tr>
 					<tr>
 						<th style="text-align: right;">VAT:</th>
-						<th><?php if(isset($check_value)){ echo $check_value; }else{ echo "{{VAT1}}";}?>%</th>
+						<th>{{VAT1}}%</th>
 					</tr>
 					<tr>
 						<th style="text-align: right;">Grand Total :</th>
