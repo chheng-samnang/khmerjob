@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->account_login=$this->session->acc_log1;
 			$this->load->model('front/cv_m');
 			$this->load->model('front/advertising_m');
-			
+
 		}
 		public function logout()
 		{
@@ -259,7 +259,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			elseif(isset($_POST['btnPreview']))
 			{
 				if($this->validation()==TRUE)
-				        {		$data["modify"]=$this->input->post("txtModify");	
+				        {		$data["modify"]=$this->input->post("txtModify");
 								$data["cv_id"]	=	$this->input->post("txtCvID");
 				        		$data['acc_info'] =$this->cv_m->account();//slect tbl_account
 				        		$data['cat_name'] =$this->cv_m->pCV_category($this->input->post("ddlCategory"));//slect category
@@ -356,16 +356,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			}
 		}
 		public function post_cv_edit($id="")
-		{	
+		{
 			if($this->account_login)
-			{	
-				if(isset($_POST["btnBack"])){ $data["modify"]= $this->input->post("modify"); }		
+			{
+				if(isset($_POST["btnBack"])){ $data["modify"]= $this->input->post("modify"); }
 				$this->session->id=$id;
 				$data["acc_head"]=$this->acc->acc_head();
 				$data["ads_top"]=$this->advertising_m->ads_top();
 				$this->load->view("template_frontend/herder_and_nav",$data);
 				$row=$this->cv_m->cv_code($id);
-				if($row=="KJCV-000001"){$row1=$row;}else{$row1=$row->cv_code;}
+
+				if(isset($row)&&$row=="KJCV-000001"){$row1=$row;}else{$row1=$row->cv_code;}
 				$data["cv_code"]=$row1;
 				$data['cv_setup']=$this->cv_m->cv_setup();
 				$data["category"]=$this->cv_m->category();
@@ -384,7 +385,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			}
 		}
 		public function invoice_preview($VAT="")
-		{		
+		{
 			echo $this->input->post("txtImgName");
 			$data['acc_info'] =$VAT;//slect tbl_account
 			$data["VAT"]=$this->uri->segment(3);

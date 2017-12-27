@@ -104,7 +104,7 @@
                   <td class="paddingLeft"><?php echo $txtG;?></td>
                 </tr>
                 <tr class="text-style">
-                 
+
                   <td class="text_style2">LinkedIn:</td>
                   <td class="paddingLeft"><?php echo $txtLinkedIn;?></td>
                 </tr>
@@ -263,10 +263,13 @@
     }
       $("#btnBack").click(function(){
         var action = "<?php echo $this->uri->segment(4)?>";
-        if(action!="post_cv")
-        { 
+        if(action=="add")
+        {
+          window.history.back();
+        }else if(action!="post_cv"){
           window.location.assign("<?php echo base_url()?>cv_c/post_cv_edit/<?php echo $cv_id?>");
-        }else {
+        }
+        else {
           window.history.back();
         }
       });

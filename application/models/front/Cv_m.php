@@ -23,7 +23,7 @@ class Cv_m extends CI_Model
 		$search=$this->input->post("txtSearch");
 		$year_exp=$this->input->post("ddlYearExp");
 		if($id=="")
-		{	
+		{
 			if(($search!="" OR $search!=NULL) AND ($year_exp!="" OR $year_exp!=NULL) AND $year_exp!='unlimited')
 			{
 				$query=$this->db->query("SELECT post_cv_id,rate_det_type,photo,name,position FROM tbl_post_cv AS pcv INNER JOIN tbl_account AS acc ON pcv.acc_id=acc.acc_id INNER JOIN tbl_rate_detail AS rd ON pcv.priority=rd.rate_det_id WHERE cv_status='1' AND post_cv_status='Published' AND (rate_det_type LIKE '%$search%' OR name LIKE '%$search%' OR position LIKE '%$search%') AND (year_exp='{$year_exp}') ORDER BY rate_det_type ASC, post_cv_id DESC");
